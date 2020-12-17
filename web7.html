@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <body>
+<canvas id="myCanvas" width="300" height="300"></canvas>
+
+<script>
+var getCanvas = document.getElementById("myCanvas");
+var drawThis = getCanvas.getContext("2d");
+
+ // 머리그리기
+drawThis.strokeStyle = "Black";
+drawThis.lineWidth = 1;
+drawThis.beginPath();
+drawThis.arc(140, 80, 40, 0, 2*Math.PI, true);
+drawThis.stroke();
+
+ // 몸 그리기
+drawThis.strokeStyle = "Black";
+drawThis.lineWidth = 1;
+drawThis.beginPath();
+drawThis.arc(140, 200, 80, 0, 2*Math.PI, true);
+drawThis.stroke();
+
+ // 눈 그리기 - 왼쪽
+drawThis.strokeStyle = "Black";
+drawThis.lineWidth = 1;
+drawThis.beginPath();
+drawThis.arc(120, 75, 5, 0, 2*Math.PI, true);
+drawThis.stroke();
+drawThis.fillStyle = "Black";
+drawThis.fill();
+ // 눈 그리기 - 오른쪽
+drawThis.strokeStyle = "Black";
+drawThis.lineWidth = 1;
+drawThis.beginPath();
+drawThis.arc(155, 75, 5, 0, 2*Math.PI, true);
+drawThis.stroke();
+drawThis.fillStyle = "Black";
+drawThis.fill();
+
+ // 손 그리기
+drawThis.strokeStyle = "Blue";
+drawThis.lineWidth = 5;
+drawThis.beginPath();
+drawThis.moveTo(75,150);
+drawThis.lineTo(40, 190);
+
+drawThis.moveTo(205, 150);
+drawThis.lineTo(240, 190);
+drawThis.stroke();
+
+</script>
+</body>
+</head>
+</html>
